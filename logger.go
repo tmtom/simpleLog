@@ -60,7 +60,7 @@ func logInternal(logLevel LogLevel, msg string) {
 		} else {
 			m = &MsgLevel
 		}
-		logger.Output(2, (*m)[logLevel]+": "+msg)
+		logger.Output(3, (*m)[logLevel]+": "+msg)
 	}
 }
 
@@ -72,7 +72,7 @@ func logInternalF(logLevel LogLevel, format string, v ...interface{}) {
 		} else {
 			m = &MsgLevel
 		}
-		logger.Output(2, fmt.Sprintf((*m)[logLevel]+": "+format, v...))
+		logger.Output(3, fmt.Sprintf((*m)[logLevel]+": "+format, v...))
 	}
 }
 
